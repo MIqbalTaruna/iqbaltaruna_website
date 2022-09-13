@@ -18,11 +18,6 @@
 }
 
 .container {
-    display: grid;
-    grid-template-areas:
-        "hero"
-        "education"
-        "portfolios";
     gap: 20px;
 }
 
@@ -59,7 +54,6 @@ ul li a:hover {
 }
 
 .header {
-    grid-area: header;
     width: 100%;
     background-color: var(--primary-color);
     color: white;
@@ -79,7 +73,6 @@ ul li a:hover {
 /* Hero Start */
 
 .hero {
-    grid-area: hero;
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -164,7 +157,6 @@ p.year {
 /* Portfolio Start */
 
 .portfolios {
-    grid-area: portfolios;
     background-color: #ddd;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
