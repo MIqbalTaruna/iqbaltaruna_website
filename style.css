@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: white;
+    --black: rgb(28, 28, 28);
+    --gray: #50555c;
+    --primary-color: #07bc9b;
+    --accent: #2a3b4e;
+    --coral: #ff7f50;
+    --font-type: "Poppins", sans-serif;
+    --my-padding: 0 10rem;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "hero"
+        "education"
+        "portfolios";
+    gap: 20px;
+}
+
+.pad {
+    padding: var(--my-padding);
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+    font-family: var(--font-type);
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Navbar Start */
+
+ul {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all .5s;
+}
+
+ul li a:hover {
+    color: var(--accent);
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: fixed;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Navbar End */
+
+/* Hero Start */
+
+.hero {
+    grid-area: hero;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    background-image: url(img/hero-1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h2 {
+    font-size: 4rem;
+}
+
+.hero button[type="button"] {
+    font-size: 1.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5em 2em;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero button[type="button"]:hover {
+    color: var(--accent);
+    box-shadow: 0px 0px 15px 1px rgba(28, 28, 28, 0.25);
+    transition: all 0.5s;
+}
+
+.hero button[type="button"]:active {
+    box-shadow: none;
+}
+
+/* Hero End */
+
+/* Education Start */
+
+.education {
+    display: grid;
+    gap: 20px;
+}
+
+.title {
+    color: var(--gray);
+    text-align: center;
+    font-size: 3.2rem;
+    margin: 0.5em 0;
+    grid-column: 1/-1;
+}
+
+.edu {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+}
+
+.edu img {
+    border-radius: 1rem;
+}
+
+.profile h3 {
+    color: var(--primary-color);
+}
+
+.profile p {
+    color: var(--gray);
+    font-size: 1.6rem;
+}
+
+p.year {
+    color: var(--coral);
+}
+
+/* Education End */
+
+/* Portfolio Start */
+
+.portfolios {
+    grid-area: portfolios;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.portfolios img {
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px rgba(28, 28, 28, 0.25);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.portfolios img:hover {
+    box-shadow: 0px 0px 10px rgba(28, 28, 28, 0.5);
+}
+
+/* Portfolio End */
+
+/* Services Start */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service {
+    color: var(--accent);
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(28, 28, 28, 0.25);
+    padding: 2rem;
+    display: grid;
+    gap: 20px;
+    align-content: space-between;
+    justify-items: center;
+}
+
+.service img {
+    max-width: 15rem;
+}
+
+.service button[type="button"] {
+    border: none;
+    font-size: 1.6rem;
+    padding: 0.5em 0;
+    width: 100%;
+    cursor: pointer;
+    background-color: #07bc9b;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.service button[type="button"]:hover {
+    color: var(--accent);
+    box-shadow: 0px 0px 10px rgba(28, 28, 28, 0.5);
+}
+
+.service button[type="button"]:active {
+    box-shadow: none;
+}
+
+/* Services End */
+
+/* Footer Start */
+
+.footer {
+    text-align: center;
+    background-color: var(--accent);
+    color: white;
+    padding: 1rem 0;
+}
+
+/* Footer End */
+
+/* Hamburger Menu Start*/
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: var(--accent);
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+    background: var(--accent);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+    background-color: #ddd;
+    color: var(--accent);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header-1 {
+    display: none;
+}
+
+/* Hamburger Menu End*/
+
+/* Responsive Breakpoint */
+
+@media screen and (max-width: 768px) {
+    :root {
+        --my-padding: 0 5rem;
+    }
+
+    .edu {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --my-padding: 0 2rem;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .header-1 {
+        display: block;
+        position: fixed;
+        width: 100%;
+    }
+
+    .service p {
+        display: none;
+    }
+
+    .services {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
